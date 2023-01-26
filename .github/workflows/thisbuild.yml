@@ -1,11 +1,19 @@
-name: mytest
-on: push
+name: 'Test'
+
+# Events that will trigger our workflow
+on: [ 'pull_request', 'push' ]
+
+# List of custom jobs
 jobs:
-	build-job:
-		runs-on: ubuntu-latest
-		steps:
-			  -run: npm install
-			  -uses: actions/checkout@v3
-			   with:
-			   node-version: '16'
-				 -run: node server.js
+  # Job is called "test"
+  test:
+    # Using a "label" to assign job to a specific hosted runner
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out our repository under "$GITHUB_WORKSPACE", so our job can access it
+      - name: 'Checkout repository'
+        uses: actions/checkout@v3
+
+      # Runs commands using the runners shell
+      - name: 'Run tests'
+        run: npm install && npm test
