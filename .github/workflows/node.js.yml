@@ -5,7 +5,7 @@ name: Node.js CI
 
    
 #Manually running a workflow
-#You can configure your workflow to use the workflow_dispatch event. This enables a "Run workflow" button on the Actions tab.
+#You can configure your workflow to use the workflow_dispatch event. This enables a "Run workflow" BUTTON on the Actions tab.
 on:
   workflow_dispatch:
 
