@@ -6,7 +6,7 @@ The folder contains two workflows.
 The successful one is called node.js
 
 This has been built using following sections in Github documentation:
-Using workflows/Starter Workflow
+Using workflows/Starter Workflow and 
 Test&Build/Test&Build Node.js
 
 The starter workflows comes with npm. The npm install command contains process to check for package.json file, but also if you use command npm ci then it will try and generate a file called package-lock.json
